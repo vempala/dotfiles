@@ -8,6 +8,19 @@ set editing-mode vi
 set keymap vi-command
 "gg": beginning-of-history
 "G": end-of-history
+
+# kartikhere
+# see options here -> http://zsh.sourceforge.net/Doc/Release/Editor-Functions-Index.html#Editor-Functions-Index-1_tp_letter-V
+#"H": beginning-of-line
+#"L": end-of-line
+
+# THIS WORKS. Put in .zshrc -- via https://gist.github.com/pprince/6bdd4e46335fa2d87bab
+# via http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html
+# bindkey -M "vicmd" "L" vi-end-of-line 
+
+
+
+
 set keymap vi-insert
 "jj": vi-movement-mode
 "jk": vi-movement-mode

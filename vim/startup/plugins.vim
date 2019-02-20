@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/pluggy')
 
 Plug 'JamshedVesuna/vim-markdown-preview'                  " preview markdown locally
 Plug 'Valloric/ListToggle'                                 " Toggling quickfix and location list
@@ -6,7 +6,8 @@ Plug 'Valloric/MatchTagAlways'                             " always highlight ma
 Plug 'Yggdroot/indentLine'                                 " show indent
 Plug 'airblade/vim-gitgutter'                              " git changes in gutter
 Plug 'benmills/vimux'                                      " Vim and Tmux Integration
-Plug 'bling/vim-airline'                                   " Status line
+" Plug 'bling/vim-airline'                                   " Status line
+Plug 'vim-airline/vim-airline'                             " Status line
 Plug 'christoomey/vim-tmux-navigator'                      " Window/Pane switching with Vim and Tmux
 Plug 'ctrlpvim/ctrlp.vim'                                  " File searchin and opening
 Plug 'derekwyatt/vim-fswitch', { 'for': 'cpp' }            " Fastswitch (cpp/h toggle)
@@ -46,6 +47,16 @@ Plug 'vim-airline/vim-airline-themes'                      " Status line themes
 Plug 'w0rp/ale'                                            " Syntax checking
 Plug 'wesQ3/vim-windowswap'                                " swap splits
 Plug 'yssl/QFEnter'                                        " quickfix open in different places
+
+" kartik
+Plug 'blueyed/vim-diminactive'                             " dim inactive windows/splits
+Plug 'justinmk/vim-sneak'                                  " Jump to any location specified by two characters - Sim to EasyMotion
+Plug '~/.fzf/bin/fzf', {'dir': '~/.fzf'}                   " Fuzzy finder binary
+Plug 'junegunn/fzf.vim'                                    " Fuzzy finder vim plugin -- :Ag to grep via fzf via ag!
+Plug 'mileszs/ack.vim'                                     " Uses 'ag' for search instead of grep -- :Ack to grep 
+Plug 'sheerun/vim-polyglot'                                " 114 language packs
+Plug 'tpope/vim-unimpaired'                                " Pairs of shortcuts like :cnext :cprevious
+Plug 'dbeniamine/cheat.sh-vim'                             " cheat sheets 
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'Valloric/YouCompleteMe'

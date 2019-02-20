@@ -2,9 +2,11 @@
 
 if [ "$(uname)" = "Darwin" ]; then
     # if no gls, brew install coreutils
-    alias ls='gls --color=auto'
+    # alias ls='gls --color=auto'
+    alias ls='gls --color=auto --group-directories-first -X'
 else
-    alias ls='ls --color=auto'
+    # alias ls='ls --color=auto'
+    alias ls='ls --color=auto --group-directories-first -X'
 fi
 
 alias cdr='cd $(git rev-parse --show-toplevel)'
@@ -23,6 +25,8 @@ alias tmux='tmux -2u'
 alias topcpu='/bin/ps -eo pcpu,pid,user,args | sort -k 1 -r | head -10'
 alias upper="tr '[:lower:]' '[:upper:]'"
 alias wfc='curl "wttr.in/nyc?m"'
+alias ch='cht.sh'
+alias cht='cht.sh'
 
 [ -f ~/.zsh_local/zshrc_local_aliases.zsh ] && source ~/.zsh_local/zshrc_local_aliases.zsh
 

@@ -49,3 +49,4 @@ PATH=$PATH:/usr/local/bin
 PATH=$PATH:/usr/bin
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/sbin
+PATH=$PATH:/bb/bin

@@ -11,7 +11,8 @@ cmap w!! w !sudo tee > /dev/null %
 inoremap jj <Esc>
 inoremap jk <Esc>
 inoremap kj <Esc>
-inoremap kk <Esc>
+" Interferes with typing "kartik", followed by kj 
+" inoremap kk <Esc>
 
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings
@@ -158,3 +159,93 @@ if &term =~ '^screen' && exists('$TMUX')
     execute "set <F11>=\e[23;*~"
     execute "set <F12>=\e[24;*~"
 endif
+
+
+
+
+" KARTIK
+
+
+function! Save_to_vim_clipboard_for_mac()
+    "let save_pos = getpos(".")
+    call writefile(getreg('"', 1, 1), "/home/kvempala/.vim_clipboard_for_mac.txt")
+    "call setpos(".", save_pos)
+endfunction
+
+
+" mac will then ftp this file back to mac and then a shortcut will load that
+" ..file into the system clipboard
+" Does NOT work, control-c aborts whatever is happening in Vim
+" map <C-c> :call writefile(getreg('"', 1, 1), "/home/kvempala/.vim_clipboard_for_mac.txt")<CR>'"')) " DOES NOT WORK
+
+"WORKS!!!
+nnoremap <leader>y :call writefile(getreg('"', 1, 1), "/home/kvempala/.vim_clipboard_for_mac.txt")<CR>
+
+
+" Kartik
+"center the window automatically around the cursor after jumping to a location with motions like n (next search pattern occurrence) or } (end of next paragraph)
+nnoremap n nzz
+nnoremap } }zz
+
+"soft wrap the lines
+set wrap
+set linebreak
+set nolist     " list disables linebreak"
+
+"move visual-line by visual-line
+nnoremap j gj
+nnoremap k gk
+
+" 'retain' old behavior
+nnoremap gj j
+nnoremap gk k
+
+" ZZ and ZX as quicker alternatives to :wa and :wq 
+nnoremap ZZ :wa<CR>
+nnoremap ZX :wa<CR> :q<CR>
+nnoremap XX :q<CR>
+
+" The default behavior for the substitute operation, :s/pattern/replacement/, is to replace only the first occurrence of the pattern. To make it replace all occurrences on the line by default, you add the g suffix, as in  :s/pattern/replacement/g. -- or just do set gdefault
+set gdefault
+
+" D deletes from the cursor to the end of the line; C changes from the cursor to the end of the line. For some reason, however, Y yanks the entire line, both before and after the cursor. If this inconsistency bothers you, you can fix it with a remapping: 
+nnoremap Y y$
+
+" KARTIK TIPS :
+" - To paste, use 'p' instead of 'P', cuz the former pastes AFTER the end of the line
+
+" for scrolling up and down quickly
+nnoremap J 7j
+nnoremap K 7k
+vnoremap J 7j
+vnoremap K 7k
+
+" H to go to first non-whitespace character and L to go to the last
+nnoremap H ^
+nnoremap L $
+vnoremap H ^
+vnoremap L $
+
+" unmap stuff that tmux is using
+inoremap <C-H> <Nop>
+inoremap <C-J> <Nop>
+inoremap <C-K> <Nop>
+inoremap <C-L> <Nop>
+
+" TODO kartik first install ripgrep
+" tell ack.vim to use ripgrep instead
+" let g:ackprg = 'rg --vimgrep --no-heading'
+
+" <leader>l -- gives linting results in bottom pane -- toggles too
+" grep for the word under the cursor
+" 1) git grep in the current project
+nmap <leader>k :Ggrep! "\b<cword>\b" <CR>
+" 2) regular 'grep -r' in the current folder
+nmap <leader>i :Ack! "\b<cword>\b" <CR>
+
+" open the quickfix window after :Ggrep via Fugitive --
+" See https://github.com/tpope/vim-fugitive/blob/master/README.markdown#faq
+" When you're done, hit XX (i.e :q)
+autocmd QuickFixCmdPost *grep* cwindow
+
+

@@ -17,7 +17,12 @@
     dum = diff upstream/master -w
     f = fetch
     fa = fetch --all
+    # ASCII art log
     lg = log --decorate --oneline --graph --branches --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)'
+    # Show which 'f'iles changed. Super useful!! -- with ASCII art log
+    lgf = log --decorate --oneline --graph --branches --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold blue)(%ar) %C(bold yellow)%d%C(reset) %C(green)%s%C(reset) %C(dim green)- %an%C(reset)' --name-status
+    # Show which 'f'iles changed. Super useful!! -- with regular log
+    logf = log --name-status
     lp = log -p --stat
     pl = pull
     plom = pull origin master
@@ -47,6 +52,7 @@
 [core]
     pager = less -F -X -R
     preloadindex = true
+	excludesfile = /home/kvempala/.gitignore
 [mergetool "fugitive"]
     cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
 [mergetool]
@@ -67,3 +73,10 @@
 # Allow local customizations
 [include]
     path = ~/.gitconfig_local
+[user]
+	name = Kartik Vempala
+	email = kvempala@bloomberg.net
+[pull]
+	rebase = true
+[gc]
+	pruneexpire = 180 days

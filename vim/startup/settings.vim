@@ -169,6 +169,39 @@ set scrolloff=5
 set winminwidth=0
 set winminheight=0
 
+" kartik
+
+" Always show the tab line (it has the file name in it)
+set showtabline=2
+
+" kartik -- Pipe | for insert mode and "block" for normal/command mode
+let &t_SI = "\e[5 q"
+let &t_EI = "\e[2 q"
+augroup myCmds
+au!
+autocmd VimEnter * silent !echo -ne "\e[2 q"
+augroup END
+" Ps = 0  -> blinking block.
+" Ps = 1  -> blinking block (default).
+" Ps = 2  -> steady block.
+" Ps = 3  -> blinking underline.
+" Ps = 4  -> steady underline.
+" Ps = 5  -> blinking bar (xterm).
+" Ps = 6  -> steady bar (xterm).
+
+" KARTIK
+
+" Disable tmux navigator when zooming the Vim pane
+" Keeps all navigation within Vim until the tmux pane is explicitly unzoomed
+let g:tmux_navigator_disable_when_zoomed = 1
+
+" For vim-diminactive, set the "out of focus" color to slightly darker gray
+" (237) than that for tmux (240)
+hi ColorColumn term=reverse ctermbg=237
+
+
+
+
 "" ============================================================================
 ""                               Auto Commands
 "" ============================================================================
