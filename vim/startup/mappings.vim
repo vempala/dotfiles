@@ -10,8 +10,8 @@ cmap w!! w !sudo tee > /dev/null %
 " Leaving insert mode with some ups and downs
 inoremap jj <Esc>
 inoremap jk <Esc>
-inoremap kj <Esc>
-" Interferes with typing "kartik", followed by kj 
+" Interferes with typing "kartik", followed by kj or kk
+" inoremap kj <Esc>
 " inoremap kk <Esc>
 
 "" ============================================================================
