@@ -3,10 +3,10 @@
 if [ "$(uname)" = "Darwin" ]; then
     # if no gls, brew install coreutils
     # alias ls='gls --color=auto'
-    alias ls='gls --color=auto --group-directories-first -X'
+    alias ls='gls --color=auto --group-directories-first -X -rt'
 else
     # alias ls='ls --color=auto'
-    alias ls='ls --color=auto --group-directories-first -X'
+    alias ls='ls --color=auto --group-directories-first -X -rt'
 fi
 
 alias cdr='cd $(git rev-parse --show-toplevel)'
@@ -15,6 +15,8 @@ alias g='git'
 alias gg='git grep'
 alias ggi='git grep -i'
 alias grep='grep --color=auto'
+alias l='ls -Fhlp'
+alias la='l -a'
 alias less='less -N'
 alias ll='ls -lrtah'
 alias lower="tr '[:upper:]' '[:lower:]'"
