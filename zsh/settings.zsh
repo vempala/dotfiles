@@ -53,6 +53,35 @@ export PROMPT='%F{green}%n@%m %F{yellow}$(git_prompt_info_mine) %F{cyan}%d
 export ZSH_THEME_GIT_PROMPT_PREFIX=""
 export ZSH_THEME_GIT_PROMPT_SUFFIX=""
 
+
+## ============================================================================
+##               Vi: Change cursor to indicate Insert vs Normal mode
+## ============================================================================
+
+# via https://unix.stackexchange.com/questions/547/make-my-zsh-prompt-show-mode-in-vi-mode
+
+function zle-keymap-select zle-line-init
+{
+    # change cursor shape in iTerm2
+    case $KEYMAP in
+        vicmd)      print -n -- "\E]50;CursorShape=0\C-G";;  # block cursor
+        viins|main) print -n -- "\E]50;CursorShape=1\C-G";;  # line cursor
+    esac
+
+    zle reset-prompt
+    zle -R
+}
+
+function zle-line-finish
+{
+    print -n -- "\E]50;CursorShape=0\C-G"  # block cursor
+}
+
+zle -N zle-line-init
+zle -N zle-line-finish
+zle -N zle-keymap-select
+
+
 #  ============================================================================
 #                               FZF Config
 #  ============================================================================
