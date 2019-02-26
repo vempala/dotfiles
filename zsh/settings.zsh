@@ -167,4 +167,14 @@ if _has fzf && _has ag; then
 fi
 
 
+# kartik
+#  ============================================================================
+#       In terminal Vi mode: Make backspace and delete etc work as expected
+#  ============================================================================
+
+# via https://blog.pilif.me/2004/10/21/delete-key-in-zsh/
+bindkey    "^[[3~"          delete-char
+bindkey    "^[3;5~"         delete-char
+# via https://unix.stackexchange.com/questions/290392/backspace-in-zsh-stuck
+bindkey    -v '^?'          backward-delete-char
 
