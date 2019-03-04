@@ -1,5 +1,9 @@
 #!/usr/bin/env zsh
 
+# kartik
+# Disable "loading zsh completions from shared (insecure) folders is not allowed"
+ZSH_DISABLE_COMPFIX="true"
+
 # load zgen
 source "${HOME}/.dotfiles/zgen/zgen.zsh"
 
