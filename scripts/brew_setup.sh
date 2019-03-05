@@ -7,10 +7,26 @@ fi
 brew update
 brew upgrade
 
+# EXTRA: Install via the App Store
+#  - haskell-for-mac \ # $24
+
 brew cask install \
+    adobe-acrobat-reader \
+    alfred \
+    bettertouchtool \
     docker \
+    firefox \
+    flux \
+    google-chrome \
+    # haskell-for-mac \
+    hammerspoon \
     iterm2 \
     java \
+    karabiner-elements \
+    moom \
+    notion \
+    optimal-layout \
+    skype \
     spectacle \
     vagrant \
     virtualbox
