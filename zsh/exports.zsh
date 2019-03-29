@@ -45,16 +45,15 @@ fi
 # kartik
 # "more local" paths are before "more standard" paths
 # berg
-PATH=/bb/bin:$PATH
-PATH=/sbin:$PATH
-PATH=/bin:$PATH
-PATH=/usr/sbin:$PATH
-PATH=/usr/bin:$PATH
-PATH=/usr/local/sbin:$PATH
-PATH=/usr/local/bin:$PATH
+
 PATH=~/.local/bin:$PATH
 PATH=~/bin:$PATH
 PATH=~/bin_local:$PATH
-
-
+PATH=$PATH:/usr/local/bin
+PATH=$PATH:/usr/local/sbin
+PATH=$PATH:/usr/bin
+PATH=$PATH:/usr/sbin
+PATH=$PATH:/bin
+PATH=$PATH:/sbin
+PATH=$PATH:/bb/bin
 
