@@ -34,6 +34,7 @@ alias tree='tree --ignore-case -I "cmake.bld|RefRoot|.git"'
 alias treeall='tree -a --ignore-case -I "cmake.bld|RefRoot|.git"'
 alias treedisk='tree --du -a --ignore-case -I "cmake.bld|RefRoot|.git"'
 alias treedirs='tree -d --ignore-case -I "cmake.bld|RefRoot|.git"'
+alias treemodified='tree -a --ignore-case -I "cmake.bld|RefRoot|.git"'
 
 # semi-transient aliass
 alias py3='python3.6'
