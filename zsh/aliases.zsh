@@ -30,13 +30,15 @@ alias wfc='curl "wttr.in/nyc?m"'
 alias ch='cht.sh'
 alias cht='cht.sh'
 alias cl='clear'
-alias tree='tree --ignore-case -I "cmake.bld|RefRoot|.git"'
-alias treeall='tree -a --ignore-case -I "cmake.bld|RefRoot|.git"'
-alias treedisk='tree --du -a --ignore-case -I "cmake.bld|RefRoot|.git"'
-alias treedirs='tree -d --ignore-case -I "cmake.bld|RefRoot|.git"'
-alias treemodified='tree -a --ignore-case -I "cmake.bld|RefRoot|.git"'
 
-# semi-transient aliass
+treeignorelist='cmake.bld|RefRoot|.git|*.o|swig|*.cache|*.del|*_del|del_*|*.pyc'
+alias tree="tree --ignore-case -I \"$treeignorelist\""
+alias treeall="tree -a --ignore-case -I \"$treeignorelist\""
+alias treedisk="tree --du -a --ignore-case -I \"$treeignorelist\""
+alias treedirs="tree -d --ignore-case -I \"$treeignorelist\""
+alias treemodified="tree -D -a --ignore-case -I \"$treeignorelist\""
+
+# semi-transient aliases
 alias py3='python3.6'
 
 [ -f ~/.zsh_local/zshrc_local_aliases.zsh ] && source ~/.zsh_local/zshrc_local_aliases.zsh
