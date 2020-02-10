@@ -57,6 +57,8 @@ Plug 'mileszs/ack.vim'                                     " Uses 'ag' for searc
 Plug 'sheerun/vim-polyglot'                                " 114 language packs
 Plug 'tpope/vim-unimpaired'                                " Pairs of shortcuts like :cnext :cprevious
 Plug 'dbeniamine/cheat.sh-vim'                             " cheat sheets 
+Plug 'kalekundert/vim-coiled-snake'                        " Python code-folding -- zM (close all), zR (open all), za (toggle locally), zm (incremental/More folding), zr (decremental/Reduce folding),  :help fold-commands
+Plug 'Konfekt/FastFold'                                    " Faster folding
 
 if g:platform == "Linux" || g:platform == "Darwin"
     Plug 'Valloric/YouCompleteMe'
