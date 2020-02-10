@@ -21,6 +21,8 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/last-working-dir
     zgen oh-my-zsh plugins/wd
     zgen oh-my-zsh plugins/web-search
+    # kartik
+    zgen oh-my-zsh plugins/tmux
 
     # update zgen and plugins automatically
     zgen load unixorn/autoupdate-zgen
