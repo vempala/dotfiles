@@ -9,32 +9,36 @@ brew upgrade
 
 # EXTRA: Install via the App Store
 #  - haskell-for-mac \ # $24
+    # bettertouchtool \
+    # docker \
+    # firefox \
+    # flux \
+    # google-chrome \
+    # haskell-for-mac \
+    # hammerspoon \
+    # virtualbox 
+    # optimal-layout \ # get this from the app store. Homebrew version can't be granted accessibility privilege in "Security and Privacy"
 
 brew cask install \
     adobe-acrobat-reader \
     alfred \
-    bettertouchtool \
-    docker \
-    firefox \
-    flux \
-    google-chrome \
-    # haskell-for-mac \
-    hammerspoon \
     iterm2 \
     java \
     karabiner-elements \
     moom \
     notion \
-    optimal-layout \
     skype \
     spectacle \
-    vagrant \
-    virtualbox
+    vagrant
 
+# checkstyle \
+    # gnome-common \
+    # maven \
+    # node \
+    # grip \ #readme driven development
 brew install \
     bash-completion \
     boost \
-    checkstyle \
     clang-format \
     cmake \
     coreutils \
@@ -43,14 +47,11 @@ brew install \
     doxygen \
     gcc \
     git \
-    gnome-common \
     grip \
     htop \
     hub \
     llvm \
-    maven \
     neovim \
-    node \
     python \
     python3 \
     shellcheck \
