@@ -79,4 +79,6 @@
 [pull]
 	rebase = true
 [gc]
-	pruneexpire = 180 days
+    pruneexpire = 180 days
+[url "bbgithub:"]
+    insteadOf = https://bbgithub.dev.bloomberg.com
