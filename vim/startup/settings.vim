@@ -118,6 +118,10 @@ set whichwrap+=<,>,h,l,[,]
 " the output of messages and the 'press a key' prompt that goes with these
 set shm=at
 
+" kartik
+" stop autoindent from messing up pastes
+set pastetoggle=<F3>
+
 "" ============================================================================
 ""                                Appearance
 "" ============================================================================
@@ -199,9 +203,15 @@ let g:tmux_navigator_disable_when_zoomed = 1
 " (237) than that for tmux (240)
 hi ColorColumn term=reverse ctermbg=237
 
-
-
-
+" colors for Folds
+" Foreground
+" Pink
+" hi Folded ctermfg=176
+" Blue
+hi Folded ctermfg=68
+" Background
+" Black
+hi Folded ctermbg=0
 "" ============================================================================
 ""                               Auto Commands
 "" ============================================================================
