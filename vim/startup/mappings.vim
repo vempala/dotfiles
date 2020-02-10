@@ -8,11 +8,13 @@ cmap w!! w !sudo tee > /dev/null %
 ""                           Insert Mode Mappings
 "" ============================================================================
 " Leaving insert mode with some ups and downs
-inoremap jj <Esc>
-inoremap jk <Esc>
+" inoremap jj <Esc>
+" inoremap jk <Esc>
 " Interferes with typing "kartik", followed by kj or kk
 " inoremap kj <Esc>
 " inoremap kk <Esc>
+inoremap jf <Esc>
+inoremap fj <Esc>
 
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings
