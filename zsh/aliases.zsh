@@ -14,10 +14,10 @@ alias fn='find . -name'
 alias g='git'
 alias gg='git grep'
 alias ggi='git grep -i'
+# g cim "msg" -- instead of `git commit -m "msg"`
 alias grep='grep --color=auto'
 alias l='ls -Fhlp'
 alias la='l -a'
-alias less='less -N'
 alias ll='ls -lrtah'
 alias lower="tr '[:upper:]' '[:lower:]'"
 alias m='make -j'
@@ -30,6 +30,12 @@ alias wfc='curl "wttr.in/nyc?m"'
 alias ch='cht.sh'
 alias cht='cht.sh'
 alias cl='clear'
+alias less='less -N'
+# Add vi customization to less
+VLESS=$(find /usr/share/vim -name 'less.sh')
+if [ ! -z $VLESS ]; then
+    alias less=$VLESS
+fi
 
 treeignorelist='cmake.bld|RefRoot|.git|*.o|swig|*.cache|*.del|*_del|del_*|*.pyc'
 alias tree="tree --ignore-case -I \"$treeignorelist\""
