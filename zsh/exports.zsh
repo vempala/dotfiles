@@ -9,6 +9,11 @@ export LIBRARY_PATH="/opt/X11/lib:$LIBRARY_PATH"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
+# fix locale
+# zsh doesn't seem to know that my prompt is UTF-8 -- See https://unix.stackexchange.com/questions/90772/first-characters-of-the-command-repeated-in-the-display-when-completing/302418#302418
+export LC_CTYPE=en_US.UTF-8
+# fix the "sort order" of spaces, underscores, lower/upper case letters, numbers -- https://stackoverflow.com/questions/1184268/unix-sort-treatment-of-underscore-character
+export LC_COLLATE=C
 
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1
@@ -39,6 +44,12 @@ export KEYTIMEOUT=20
 if [ -d /opt/bb/bin ]; then
     PATH=/opt/bb/bin:$PATH
 fi
+
+# kartik
+no_proxy=artprod.dev.bloomberg.com,$no_proxy
+
+# FYI - from Andy T's dotfiles
+NOPROXY_BLOOMBERG="localhost,127.0.0.1,repo.dev.bloomberg.com,artifactory.bdns.bloomberg.com,artprod.dev.bloomberg.com,bbgithub.dev.bloomberg.com,blp-dpkg.dev.bloomberg.com,kubaas-api.dev.bloomberg.com"
 
 
 
