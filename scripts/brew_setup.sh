@@ -7,6 +7,8 @@ fi
 brew update
 brew upgrade
 
+brew tap homebrew/cask-versions
+
 # EXTRA: Install via the App Store
 #  - haskell-for-mac \ # $24
     # bettertouchtool \
@@ -21,7 +23,7 @@ brew upgrade
 
 brew cask install \
     adobe-acrobat-reader \
-    alfred \
+    alfred3 \
     iterm2 \
     java \
     karabiner-elements \
@@ -29,7 +31,15 @@ brew cask install \
     notion \
     skype \
     spectacle \
-    vagrant
+    vagrant \
+    bettertouchtool \
+    ubar \
+    hyperswitch \
+    dozer \
+    flux \
+    cheatsheet \
+    witch \
+    scroll-reverser
 
 # checkstyle \
     # gnome-common \
@@ -59,6 +69,7 @@ brew install \
     tree \
     vim \
     watch \
-    zsh
+    zsh \
+    go
 
 brew cleanup
