@@ -181,10 +181,11 @@ set showtabline=2
 " kartik -- Pipe | for insert mode and "block" for normal/command mode
 let &t_SI = "\e[5 q"
 let &t_EI = "\e[2 q"
-augroup myCmds
-au!
-autocmd VimEnter * silent !echo -ne "\e[2 q"
-augroup END
+" kartikherehere
+" augroup myCmds
+" au!
+" autocmd VimEnter * silent !echo -ne "\e[2 q"
+" augroup END
 " Ps = 0  -> blinking block.
 " Ps = 1  -> blinking block (default).
 " Ps = 2  -> steady block.
