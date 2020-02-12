@@ -46,11 +46,17 @@ if [ -d /opt/bb/bin ]; then
 fi
 
 # kartik
+# uses tinyproxy. Via https://bbgithub.dev.bloomberg.com/drodrig1/blpapi-bbvpn/blob/master/tinyproxy.md
+export http_proxy=http://localhost:8888
+export https_proxy=http://localhost:8888
+export HTTP_PROXY=http://localhost:8888
+export HTTPS_PROXY=http://localhost:8888
+
+# kartik
 no_proxy=artprod.dev.bloomberg.com,$no_proxy
 
 # FYI - from Andy T's dotfiles
 NOPROXY_BLOOMBERG="localhost,127.0.0.1,repo.dev.bloomberg.com,artifactory.bdns.bloomberg.com,artprod.dev.bloomberg.com,bbgithub.dev.bloomberg.com,blp-dpkg.dev.bloomberg.com,kubaas-api.dev.bloomberg.com"
-
 
 
 # kartik

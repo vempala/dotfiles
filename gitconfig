@@ -82,3 +82,5 @@
     pruneexpire = 180 days
 [url "bbgithub:"]
     insteadOf = https://bbgithub.dev.bloomberg.com
+[http]
+    proxy = http://localhost:8888
