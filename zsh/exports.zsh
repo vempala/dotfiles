@@ -51,6 +51,12 @@ export http_proxy=http://localhost:8888
 export https_proxy=http://localhost:8888
 export HTTP_PROXY=http://localhost:8888
 export HTTPS_PROXY=http://localhost:8888
+alias dev_proxy='http_proxy=http://bproxy.tdmz1.bloomberg.com:80 https_proxy=http://bproxy.tdmz1.bloomberg.com:80'
+alias ext_proxy='http_proxy=http://proxy.bloomberg.com:81 https_proxy=http://proxy.bloomberg.com:81'
+# Then for commands which require an external proxy run:
+#     ext_proxy brew update
+# And for commands which require the internal proxy run:
+#     dev_proxy curl https://blp-dpkg.dev.bloomberg.com
 
 # kartik
 no_proxy=artprod.dev.bloomberg.com,$no_proxy
