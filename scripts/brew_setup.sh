@@ -7,6 +7,8 @@ fi
 brew update
 brew upgrade
 
+echo "Install Python 3.6 (if needed) from https://www.python.org/downloads/mac-osx/"
+
 brew tap homebrew/cask-versions
 
 # EXTRA: Install via the App Store
@@ -39,7 +41,8 @@ brew cask install \
     flux \
     cheatsheet \
     witch \
-    scroll-reverser
+    scroll-reverser \
+    cyberduck
 
 # checkstyle \
     # gnome-common \
