@@ -35,7 +35,19 @@ vnoremap <silent> * y:let @/ = @"<CR>n:set hlsearch<CR>
 vnoremap <silent> # y:let @? = @"<CR>n:set hlsearch<CR>
 
 " select everything
-nmap <C-A> ggVG
+" nmap <C-A> ggVG
+" move to left tab (indirectly via BTT)
+nnoremap <C-M-h> gT
+" move to right tab (indirectly via BTT)
+nnoremap <C-M-l> gt
+" move to last active tab (indirectly via BTT)
+" https://stackoverflow.com/questions/2119754/switch-to-last-active-tab-in-vim
+" https://superuser.com/questions/410982/in-vim-how-can-i-quickly-switch-between-tabs
+if !exists('g:lasttab')
+    let g:lasttab = 1
+endif
+nnoremap <C-M-k> :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
 
 " Swap to last buffer
 nnoremap <silent> <F8> :b#<CR>
