@@ -67,6 +67,7 @@ brew install \
     neovim \
     python \
     python3 \
+    flake8 \
     shellcheck \
     tmux \
     tree \
