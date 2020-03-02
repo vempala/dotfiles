@@ -54,7 +54,7 @@
     preloadindex = true
 	excludesfile = /home/kvempala/.gitignore
 [mergetool "fugitive"]
-    cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
+    cmd = vim -f -c \"Gvdiffsplit!\" \"$MERGED\"
 [mergetool]
     keepBackup = false
 [merge]
