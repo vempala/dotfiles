@@ -30,7 +30,7 @@ Plug 'raimondi/delimitMate'                                " matching brackets
 Plug 'rhysd/vim-clang-format'                              " Vim wrapper plugin for clang-format
 Plug 'roxma/vim-tmux-clipboard'                            " integrate vim's yank register with tmux
 Plug 'sickill/vim-pasta'                                   " paste with proper indenting
-Plug 'sirver/ultisnips'                                    " snippet engine with integration into ycm; needs vim compiled with python
+" KARTIK This needs python3" Plug 'sirver/ultisnips'                                    " snippet engine with integration into ycm; needs vim compiled with python
 Plug 'szw/vim-maximizer'                                   " maximize a split
 Plug 'talek/obvious-resize'                                " resize splits
 Plug 'terryma/vim-expand-region'                           " quickly expand visual regions
