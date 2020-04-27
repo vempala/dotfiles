@@ -230,3 +230,11 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " set commentstring to not be /* for cpp
 autocmd FileType cpp setlocal commentstring=//\ %s
+
+"" ============================================================================
+""                               Performance
+"" ============================================================================
+" Syntax highlighting slows things down a lot for long lines
+set synmaxcol=200
+
+
