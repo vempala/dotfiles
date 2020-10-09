@@ -37,7 +37,7 @@ if [ ! -z $VLESS ]; then
     alias less=$VLESS
 fi
 
-treeignorelist='cmake.bld|RefRoot|.git|*.o|swig|*.cache|*.del|*_del|del_*|*.pyc'
+treeignorelist='cmake.bld|RefRoot|.git|*.o|swig|*.cache|*.del|*_del|del_*|*.pyc|node_modules|deploy_dir|venv*'
 alias tree="tree --ignore-case -I \"$treeignorelist\""
 alias treeall="tree -a --ignore-case -I \"$treeignorelist\""
 alias treedisk="tree --du -a --ignore-case -I \"$treeignorelist\""
