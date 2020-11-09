@@ -77,3 +77,16 @@ brew install \
     go
 
 brew cleanup
+
+
+# 19:37:17 dotfiles 5380 ✓ $ brew list
+# asciidoc		displayplacer		grip			libproxy		msgpack			python@3.8		unibilium
+# autoconf		docbook			htop			libtermkey		ncurses			readline		utf8proc
+# automake		doxygen			hub			libtool			neovim			ruby			vim
+# bash-completion		flake8			icu4c			libuv			node			shellcheck		watch
+# boost			gcc			ipython			libvterm		openssl@1.1		source-highlight	xz
+# clang-format		gdbm			isl			libyaml			pandoc			sqlite			zeromq
+# cmake			gettext			jupyterlab		llvm			pcre			swig			zsh
+# coreutils		git			libevent		lua			pcre2			tinyproxy-libproxy
+# cppcheck		gmp			libffi			luajit			perl			tmux
+# ctags			go			libmpc			mpfr			python			tree
