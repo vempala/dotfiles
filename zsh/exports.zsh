@@ -47,10 +47,10 @@ fi
 
 # kartik
 # uses tinyproxy. Via https://bbgithub.dev.bloomberg.com/drodrig1/blpapi-bbvpn/blob/master/tinyproxy.md
-export http_proxy=http://localhost:8888
-export https_proxy=http://localhost:8888
-export HTTP_PROXY=http://localhost:8888
-export HTTPS_PROXY=http://localhost:8888
+# export http_proxy=http://localhost:8888
+# export https_proxy=http://localhost:8888
+# export HTTP_PROXY=http://localhost:8888
+# export HTTPS_PROXY=http://localhost:8888
 alias dev_proxy='http_proxy=http://bproxy.tdmz1.bloomberg.com:80 https_proxy=http://bproxy.tdmz1.bloomberg.com:80'
 alias ext_proxy='http_proxy=http://proxy.bloomberg.com:81 https_proxy=http://proxy.bloomberg.com:81'
 # Then for commands which require an external proxy run:
@@ -72,7 +72,7 @@ NOPROXY_BLOOMBERG="localhost,127.0.0.1,repo.dev.bloomberg.com,artifactory.bdns.b
 PATH=~/.local/bin:$PATH
 PATH=~/bin:$PATH
 PATH=~/bin_local:$PATH
-PATH=$PATH:/usr/local/bin
+PATH=/usr/local/bin:$PATH
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/bin
 PATH=$PATH:/usr/sbin

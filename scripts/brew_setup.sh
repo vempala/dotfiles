@@ -47,7 +47,6 @@ brew cask install \
 # checkstyle \
     # gnome-common \
     # maven \
-    # node \
     # grip \ #readme driven development
 brew install \
     bash-completion \
@@ -64,7 +63,7 @@ brew install \
     htop \
     hub \
     llvm \
-    neovim \
+    node \
     python \
     python3 \
     flake8 \
