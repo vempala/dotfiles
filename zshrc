@@ -5,6 +5,10 @@ fi
 
 fpath+=(~/.zsh/completions $fpath)
 
+## ZSH SOURCING SETTINGS
+# disable escaping of parentheses while pasting to console
+DISABLE_MAGIC_FUNCTIONS=true
+
 source ~/.zsh/functions.zsh
 source ~/.zsh/plugins.zsh
 source ~/.zsh/settings.zsh
