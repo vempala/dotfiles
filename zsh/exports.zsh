@@ -69,6 +69,7 @@ NOPROXY_BLOOMBERG="localhost,127.0.0.1,repo.dev.bloomberg.com,artifactory.bdns.b
 # "more local" paths are before "more standard" paths
 # berg
 
+PATH=/usr/local/opt/curl/bin:$PATH #get the HomeBrew version of curl
 PATH=~/.local/bin:$PATH
 PATH=~/bin:$PATH
 PATH=~/bin_local:$PATH
@@ -79,4 +80,6 @@ PATH=$PATH:/usr/sbin
 PATH=$PATH:/bin
 PATH=$PATH:/sbin
 PATH=$PATH:/bb/bin
+
+ 
 
