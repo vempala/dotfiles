@@ -42,7 +42,8 @@ brew cask install \
     cheatsheet \
     witch \
     scroll-reverser \
-    cyberduck
+    cyberduck \
+    dozer
 
 # checkstyle \
     # gnome-common \
