@@ -74,6 +74,7 @@ PATH=~/.local/bin:$PATH
 PATH=~/bin:$PATH
 PATH=~/bin_local:$PATH
 PATH=/usr/local/bin:$PATH
+PATH=/Users/${USER}/dev/dotfiles/bin:$PATH
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/bin
 PATH=$PATH:/usr/sbin
