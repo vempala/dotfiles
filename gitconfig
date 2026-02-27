@@ -75,10 +75,16 @@
     path = ~/.gitconfig_local
 [user]
 	name = Kartik Vempala
-	email = kvempala@bloomberg.net
+	email = 37914253+vempala@users.noreply.github.com
 [pull]
 	rebase = true
 [gc]
     pruneexpire = 180 days
 [url "bbgithub:"]
     insteadOf = https://bbgithub.dev.bloomberg.com
+[credential "https://github.com"]
+	helper = 
+	helper = !/home/kartik/miniconda3/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/home/kartik/miniconda3/bin/gh auth git-credential
