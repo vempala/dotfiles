@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export CLAUDE_CODE_EFFORT_LEVEL=max
+
 export GTEST_COLOR=yes
 
 # Command auto-correction.
